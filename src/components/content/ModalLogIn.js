@@ -33,7 +33,7 @@ function ModalLogIn({ openModalLogIn, handleCloseModal, loginGoogle }) {
                         <Grid container className="d-flex align-items-center justify-content-center">
                             <Grid item xs={12} mb={5}>
                                 <Button variant="contained" className="w-100 p-2"
-                                    style={{ backgroundColor: "#ec407a", color: "white", borderRadius: "32px" }}
+                                    style={{ backgroundColor: "black", color: "white", borderRadius: "32px" }}
                                     onClick={loginGoogle}
                                 >
                                     <GoogleIcon style={{ marginRight: "8px" }} /> Sign in with  <b style={{ marginLeft: "6px", fontSize: "18px" }}> Google</b>
@@ -66,8 +66,8 @@ function ModalLogIn({ openModalLogIn, handleCloseModal, loginGoogle }) {
                         <Grid container className="d-flex align-items-center justify-content-center mt-4">
                             <Grid item xs={12}>
                                 <Button variant="contained" className="w-100 p-2" color="success"
-                                    style={{ borderRadius: "32px" }}>
-                                    <b style={{ fontSize: "18px" }}>Sign in</b>
+                                    style={{ borderRadius: "32px",backgroundColor:"red",color:"white" }}>
+                                    <b style={{ fontSize: "18px", }}>Sign in</b>
                                 </Button>
                             </Grid>
                         </Grid>

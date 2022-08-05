@@ -57,7 +57,7 @@ function ModalOrder({ openModalOrderProp, closeModalOrderProp, totalProp, listOr
                     orderDetail: listOrderProp,
                     cost: totalProp,
                     note: note,
-                    shippedDate: new Date(shippedDate).toISOString()
+                    shippedDate: shippedDate
                 }),
                 headers: {
                     'Content-type': 'application/json; charset=UTF-8',

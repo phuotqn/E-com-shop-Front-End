@@ -217,7 +217,7 @@ function Cart() {
                                                 <MonetizationOnIcon /> <b>Thanh toán</b>
                                             </Button>
                                             :
-                                            <Button variant="contained" color="warning" onClick={btnOpenOrder}>
+                                            <Button variant="contained" style={{backgroundColor:"red",color:"white"}} onClick={btnOpenOrder}>
                                                 <LoginIcon /> &ensp; <b>Đăng nhập để tiếp tục</b>
                                             </Button>
                                         }
