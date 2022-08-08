@@ -1,10 +1,10 @@
 import { createStore, combineReducers } from "redux";
-import TaskEvent from "../components/TaskEvent";
-import addCartEvent from "../components/addCartEvent";
+import ActionHandle from "../components/ActionHandle";
+import CartHandle from "../components/CartHandle";
 
 const appReducer = combineReducers({
-    taskReducer: TaskEvent,
-    cartReducer: addCartEvent
+    taskReducer: ActionHandle,
+    cartReducer: CartHandle
 });
 
 const store = createStore(

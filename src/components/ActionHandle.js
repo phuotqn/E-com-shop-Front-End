@@ -8,7 +8,7 @@ const initialState = {
   filterProducts: null,
 }
 
-const TaskEvent = (state = initialState, action) => {
+const ActionHandle = (state = initialState, action) => {
   switch (action.type) {
     case "USER": {
       return {
@@ -58,4 +58,4 @@ const TaskEvent = (state = initialState, action) => {
   }
 }
 
-export default TaskEvent;
+export default ActionHandle;

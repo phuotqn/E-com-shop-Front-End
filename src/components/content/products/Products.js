@@ -45,7 +45,7 @@ function Products() {
           });
       } else {
         fetchAPI(
-          `http://localhost:8000/products/?name=${nameProduct}&type=${productTypes}&minPromotionPrice=${minPrice}&maxPromotionPrice=${maxPrice}`
+          `http://localhost:8000/products/?name=${nameProduct}&type=${productTypes}&minPrice=${minPrice}&maxPrice=${maxPrice}`
         )
           .then((data) => {
             setNoPage(Math.ceil(data.data.length / limit));

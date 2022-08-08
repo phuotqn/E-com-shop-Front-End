@@ -4,7 +4,7 @@ const initialState = {
     id: ((localStorage.getItem("list") !== "NaN" && localStorage.getItem("list") !== null) ? JSON.parse(localStorage.getItem("list")) : []),
 }
 
-const addCartEvent = (state = initialState, action) => {
+const CartHandle  = (state = initialState, action) => {
     switch (action.type) {
         case "ADD_CART":
             {
@@ -48,4 +48,4 @@ const addCartEvent = (state = initialState, action) => {
 }
 
 
-export default addCartEvent
+export default CartHandle

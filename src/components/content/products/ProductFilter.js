@@ -103,10 +103,6 @@ function ProductFilter() {
                     </Grid>
                 </Grid>
             </Grid>
-
-            {/* <Grid item xs={12} mt={5} pb={5} align="center">
-                <Button variant="contained" onClick={filterProduct}>Filter</Button>
-            </Grid> */}
         </Container >
     )
 }
