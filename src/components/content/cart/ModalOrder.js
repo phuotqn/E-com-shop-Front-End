@@ -1,7 +1,7 @@
 import { Container, Grid, Box, Button, Input, MenuItem, Modal, Select, Typography, FormControl, InputLabel, TextField } from "@mui/material"
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-
+import { useNavigate} from "react-router-dom"
 import swal from 'sweetalert';
 
 //Style
@@ -20,7 +20,7 @@ const style = {
 
 
 function ModalOrder({ openModalOrderProp, closeModalOrderProp, totalProp, listOrderProp, nameProps, emailProps }) {
-
+    const navigate = useNavigate()
     const { user } = useSelector((reduxData) => reduxData.taskReducer);
     const [customerName, setCutomerName] = useState(nameProps ?? "");
     const [customerEmail, setCutomerEmail] = useState(emailProps ?? "");
@@ -66,9 +66,13 @@ function ModalOrder({ openModalOrderProp, closeModalOrderProp, totalProp, listOr
             fetchAPI("http://localhost:8000/customers/phone/", body)
                 .then((data) => {
                     console.log(data);
-                    swal("Đặt hàng thành công!");
                     closeModalOrderProp();
-                    // localStorage.clear();
+                    localStorage.clear();
+                    swal("Đặt hàng thành công!")
+                        .then((result) => {
+                            window.location.reload()
+                        })
+
                 })
                 .catch((error) => {
                     swal("Đặt hàng không thành công!");

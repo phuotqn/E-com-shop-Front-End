@@ -1,4 +1,4 @@
-import Logo from "../../assets/images/shop.jpg"
+import Logo from "../../assets/images/logo.jpg"
 import ModalLogIn from "../content/ModalLogIn";
 
 
@@ -127,7 +127,7 @@ function Header() {
 
               }}
             >
-              <img src={Logo} width="60px" />
+              <img src={Logo} width="120" />
             </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -195,7 +195,7 @@ function Header() {
                 textDecoration: 'none',
               }}
             >
-              <img src={Logo} width="200" />
+              <img src={Logo} width="120" />
             </Typography>
 
             <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }} style={{ marginRight: "80px" }}>

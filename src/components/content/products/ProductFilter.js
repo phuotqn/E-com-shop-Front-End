@@ -83,15 +83,27 @@ function ProductFilter() {
                             <TextField size="small" value={maxPrice} label="Max Price" onChange={onChangeMaxPrice}></TextField>
                         </Grid>
                     </Grid>
+                    
                 </Grid>
                 <Grid item xs={2}></Grid>
-                <Grid item xs={12} lg={5} md={5} sm={6}>
-
-                    <Grid container mt={1} justifyContent="center">
+                <Grid item xs={5}>
+                        <Grid item xs={12}>
+                            <Typography variant="body1"><b>Product Type</b></Typography>
+                        </Grid>
                         <FormControl>
+                            <RadioGroup aria-labelledby="demo-radio-buttons-group-label" defaultValue="female" name="radio-buttons-group" sx={{ ml: 3 }}>
+                                <FormControlLabel value="" control={<Radio onChange={onChangeProductTypes} />} label="ALL" />
+                                {
+                                    types.map((types, index) => {
+                                        return (
+                                            <FormControlLabel key={index} value={types._id} control={<Radio onChange={onChangeProductTypes} />} label={types.name} />
+                                        )
+                                    })
+                                }
+                            </RadioGroup>
                         </FormControl>
                     </Grid>
-                </Grid>
+
                 <Grid item xs={1}></Grid>
 
                 <Grid item xs={12} lg={2} md={2} sm={6}>
